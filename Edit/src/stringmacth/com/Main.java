@@ -5,7 +5,7 @@ import java.io.IOException;
 public class Main {
 	 public static void main(String[] args) {
 		 long startTime=System.currentTimeMillis();
-		 File f=new File("E:\\\\JAVA\\\\Edit\\\\src\\\\test1\\\\orig.txt");
+		 File f=new File("E:\\JAVA\\Edit\\src\\test1\\orig.txt");
 		 File f1=new File("E:\\JAVA\\Edit\\src\\test1\\orig_0.8_add.txt");
 		 File f2=new File("E:\\JAVA\\Edit\\src\\test1\\out.txt");
 		 System.out.println("原文文本绝对路径："+f.getAbsolutePath());
@@ -17,7 +17,8 @@ public class Main {
 	                String first = FileOperation.ReadToString("E:\\JAVA\\Edit\\src\\test1\\orig.txt");
 	                String second = FileOperation.ReadToString("E:\\JAVA\\Edit\\src\\test1\\orig_0.8_add.txt");
 				 SMatch match1 = new SMatch(first, second);
-	                
+				 ISMatch match = new SMatch(first, second);
+				match.PreProgress();
 	                similarity =  match1.Match();
 	            } catch (IOException | TextException e) {
 	                System.out.println(((Throwable) e).getMessage());
