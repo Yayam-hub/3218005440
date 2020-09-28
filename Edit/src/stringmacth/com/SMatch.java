@@ -36,9 +36,9 @@ public class SMatch implements ISMatch
 
      */
 
-    public SMatch(java.lang.String origin,java.lang.String dest) {
-        this._first=origin.toCharArray();
-        this._second=dest.toCharArray();
+    public SMatch(java.lang.String first,java.lang.String second) {
+        this._first=first.toCharArray();
+        this._second=second.toCharArray();
     }
 
 
